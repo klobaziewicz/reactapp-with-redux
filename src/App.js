@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import {createStore} from 'redux'
+import { createStore } from 'redux'
 
 const data = {
+  najlepszy: 'favourite',
   produkty: [
     'produkt 1', 'produkt 2', 'produkt 3'
   ]
@@ -11,7 +12,16 @@ const data = {
 //reducer
 function produkty(state = data, action) {
   switch (action.type) {
-    default: return state
+    case 'add':
+      return {
+        ...state, produkty: [...state.produkty, action.produkt]
+      }
+    case 'reset':
+      return {
+        ...state, produkty: []
+      }
+    default:
+      return state
   }
 }
 
