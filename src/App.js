@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import createStore from 'redux'
+import {createStore} from 'redux'
 
 const data = {
   produkty: [
@@ -9,7 +9,7 @@ const data = {
 }
 
 //reducer
-function counter(state = data, action) {
+function produkty(state = data, action) {
   switch (action.type) {
     default: return state
   }
