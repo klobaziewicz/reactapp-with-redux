@@ -1,0 +1,39 @@
+.nav {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    background-color: #4274DF;
+    color: white;
+    font-size: 20px;
+
+    & img {
+        height: 80px;
+        width: auto;
+    }
+
+    & ul {
+        display: flex;
+        width: calc(100vw - 80px);
+        list-style-type: none;
+        gap: 50px;
+    }
+
+    & li {
+        flex-grow: 1;
+        padding: 3.7vh 0;
+
+        &:hover {
+            background-color: #2053c1;
+            border-radius: 30px;
+            transition: 1s;
+
+            &:first-child {
+                background-color: #4274DF;
+            }
+        }
+
+        & Link {
+            color: white;
+        }
+    }
+}

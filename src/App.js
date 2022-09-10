@@ -1,52 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-import { createStore } from 'redux'
-
-const data = {
-  najlepszy: 'favourite',
-  produkty: [
-    'produkt 1', 'produkt 2', 'produkt 3'
-  ]
-}
-
-//reducer
-function produkty(state = data, action) {
-  switch (action.type) {
-    case 'add':
-      return {
-        ...state, produkty: [...state.produkty, action.produkt]
-      }
-    case 'reset':
-      return {
-        ...state, produkty: []
-      }
-    default:
-      return state
-  }
-}
-
-const store = createStore(produkty)
-window.store = store
+import logo from './images/logo.PNG'
+import Home from './components/home';
+import Contact from './components/contact';
+import Cart from './components/cart';
+import './styles/style.scss'
+import './styles/nav.scss'
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 function App() {
-  return (
+    return (
     <div className="App">
-      <header className="App-header">
-        <p>redux</p>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div className="nav">
+          <img alt="logo" src={logo}></img>
+          <ul>
+            <li></li>
+            <li>
+              <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>Home</Link>
+            </li>
+            <li>
+              <Link to="/cart" style={{ textDecoration: 'none', color: '#fff' }}>Cart</Link>
+            </li>
+            <li>
+              <Link to="/contact" style={{ textDecoration: 'none', color: '#fff' }}>Contact</Link>
+            </li>
+          </ul>
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
+//<Produkty></Produkty>
 
 export default App;
