@@ -1,0 +1,29 @@
+.contact {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background-color: #bfdbfe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    & .about {
+        height: 58vh;
+        width: 90vw;
+        overflow-y: hidden;
+
+        & h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        & p {
+            margin: 4vh 0;
+            font-size: 20px;
+        }
+    }
+    & .social_m{
+        & img{
+            margin: 0 8vw;
+        }
+    }
+}

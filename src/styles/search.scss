@@ -1,5 +1,5 @@
 .search {
-  width: 100vw;
+  width: calc(100vw - 20px);
   height: 10vh;
   background-color: #1e3a8a;
   display: flex;
@@ -15,22 +15,27 @@
 
     & li {
       width: 33.3%;
-
     }
   }
 
   & form {
     flex-grow: 1;
-    border: 1px black solid;
     display: flex;
     align-items: center;
 
     & input {
-      flex-grow: 1;
+    flex-grow: 1;
+    margin: 0 2vw 0 0;
     }
 
     & button {
-      flex-grow: 1;
+      height: 50px;
+      width: 50px;
+      overflow-y: hidden;
+      padding: 0;
+      & img{
+        margin: -2px;
+      }
     }
   }
 
@@ -65,20 +70,20 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  & .category:focus {
+  &:focus {
     text-decoration: none;
   }
 
-  & .category:hover {
+  &:hover {
     text-decoration: none;
   }
 
-  & .category:active {
+  &:active {
     box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
     outline: 0;
   }
 
-  & .category:not([disabled]):active {
+  &:not([disabled]):active {
     box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
   }

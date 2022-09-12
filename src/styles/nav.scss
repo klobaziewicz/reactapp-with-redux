@@ -8,12 +8,12 @@
 
     & img {
         height: 80px;
-        width: auto;
+        width: 130px;
     }
 
     & ul {
         display: flex;
-        width: calc(100vw - 80px);
+        width: calc(100vw - 150px);
         list-style-type: none;
         gap: 50px;
     }

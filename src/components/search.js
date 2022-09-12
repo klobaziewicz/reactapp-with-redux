@@ -37,7 +37,7 @@ function Search(props) {
                 <li><button className="category" onClick={() => kategoria('kids')}>Kids</button></li>
             </ul>
             <form onSubmit={handleSubmit(handleRegistration)}>
-                <input type="text" placeholder='search ...' name="search" {...register('search')} required />
+                <input type="text" placeholder='search ...' name="search" {...register('search')} />
                 <button type="submit" value="Wyślij"><img src={search_icon}></img></button>
             </form>
             <span></span>
