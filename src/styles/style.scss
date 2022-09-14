@@ -5,10 +5,19 @@
     overflow-x: hidden;
 }
 
-/* width */
+
+@media screen and (max-width: 460px) {
+  ::-webkit-scrollbar {
+      display: none;
+    }
+}
+@media screen and (min-width: 461px) {
+  /* width */
 ::-webkit-scrollbar {
     width: 20px;
   }
+
+}
   
   /* Track */
   ::-webkit-scrollbar-track {
